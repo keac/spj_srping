@@ -21,7 +21,6 @@ public class JwtUtil {
         //you can put any data in the map
         HashMap<String, Object> map = new HashMap<>();
         map.put(ROLE, userRole);
-
         String jwt = Jwts.builder()
                 .setClaims(map)
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
